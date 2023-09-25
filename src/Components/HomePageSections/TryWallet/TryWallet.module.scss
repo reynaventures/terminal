@@ -1,0 +1,88 @@
+.TryWallet {
+    background-image: url(../../../assets/svg/tryWaletBG.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 5em;
+    display: flex;
+    align-items: center;
+    height: 110vh;
+    position: relative;
+    &__block {
+        max-width: 1278px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__leftPart {
+        max-width: 470px;
+    }
+    &__try {
+        color: #090b18;
+        border: 1px solid rgba(0, 0, 0, 0);
+        font-size: 2em;
+        line-height: 120%;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    &__title {
+        color: #090b18;
+        font-size: 2.95em;
+        line-height: 112%;
+        margin-bottom: 27px;
+        font-weight: 500;
+    }
+    &__text {
+        font-size: 1.125em;
+        line-height: 120%;
+        margin-bottom: 63px;
+    }
+    &__btn {
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        color: #fff;
+        background-color: #090b18;
+        border-radius: 7px;
+        padding: 18px 58px;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        transition: all .25s cubic-bezier(.39, .575, .565, 1);
+        font-size: 20px;
+        line-height: 120%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1;
+        img {
+            position: absolute;
+            top: 0;
+            left: -20%;
+            z-index: -1;
+            max-height: 100%;
+            transition: 0.5s all cubic-bezier(.39, .575, .565, 1);
+            width: 3em;
+            height: 10em;
+            filter: blur(0.3em);
+        }
+        &:hover {
+            img {
+                left: 50%;
+            }
+            background-position: 60%;
+        }
+    }
+    &__rightPart {
+        width: 50%;
+        background-image: url(../../../assets/svg/tryWalletPhone.png);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: auto 90%;
+        position: absolute;
+        top: 0%;
+        bottom: 2em;
+        left: auto;
+        right: 0%;
+    }
+}

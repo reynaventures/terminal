@@ -1,0 +1,104 @@
+.header, .header_hide {
+    z-index: 3;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding-left: 5em;
+    padding-right: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 99px;
+    width: 100%;
+    transition: 0.4s all;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1278px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__rightPart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+    &__auth_user {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid #000;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__avatar {
+        width: 30px;
+        height: 30px;
+    }
+    &__wallet {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    &__nav_item {
+        letter-spacing: -.02em;
+        font-size: 0.85em;
+        line-height: 150%;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s all;
+        &:hover {
+            color: #2962ef;
+        }
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        gap: 7px;
+        width: 190px;
+        height: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s all;
+        &:hover {
+            color: #2962ef;
+        }
+    }
+    &__btn_icon {
+        font-size: 18px;
+        font-weight: bold;
+        font-weight: 500;
+    }
+    &__btn_name {
+        letter-spacing: -.02em;
+        font-size: 1.4em;
+        line-height: 150%;
+        font-weight: 500;
+    }
+}
+.header_hide {
+    transform: translateY(-100px);
+}

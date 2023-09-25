@@ -1,0 +1,94 @@
+.EasyTrade {
+    background-color: #fff;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    position: relative;
+    width: 100%;
+    padding: 7.5em 5em 0 5em;
+    overflow: hidden;
+    height: 854px;
+    &__title {
+        color: #9898b2;
+        font-size: 1.75em;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 54px;
+    }
+    &__block {
+        max-width: 1278px;
+        height: 760px;
+        margin: 0 auto;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        column-gap: 50px;
+    }
+    @keyframes lineAnimation {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    &__line, &__line_active {
+        display: block;
+        margin-bottom: 10px;
+        height: 2px;
+        width: 100%;
+        position: relative;
+    }
+    &__line_active {
+        &::before {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgb(41, 98, 239);
+            transition: all 3s ease;
+            animation: lineAnimation 3s linear forwards;
+            animation-delay: 0.1s;
+        }
+    }
+    &__text, &__text_active {
+        opacity: 0.32;
+        color: #090b18 !important;
+        font-size: 1.5em;
+        line-height: 120%;
+        cursor: pointer;
+    }
+    &__blue_text {
+        color: rgb(41, 98, 239);
+    }
+    &__text_active {
+        opacity: 1;
+    }
+    &__img {
+        width: 100%;
+        margin-top: 35px;
+        z-index: 1;
+        position: relative;
+    }
+    &__img_wrap {
+        transition: 0.1s;
+        transition-delay: 0.1s;
+        position: relative;
+    }
+    &__gradient {
+        width: 35.0625em;
+        height: 35.3125em;
+        filter: blur(3.5em) blur(5px);
+        background-image: url(../../../assets/svg/easyTradeGradient.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 2.6em;
+        bottom: 0%;
+        left: -25%;
+    }
+}

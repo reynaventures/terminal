@@ -1,0 +1,293 @@
+.navBar {
+    width: 240px;
+    min-width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #f5f5f7;
+    display: flex;
+    flex-flow: column;
+    &__welcome {
+        padding: 24px 20px 32px 24px;
+        text-align: center;
+        border-bottom: 1px solid #e6e7e9;
+    }
+    &__logo {
+        background-color: rgb(41, 98, 239);
+        color: #fff;
+        padding: 6.5px;
+        border-radius: 7.5px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        width: 84px;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+    }
+    &__text {
+        color: #44444e;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: normal;
+        margin-bottom: 32px;
+    }
+    &__add_wallet {
+        background-color: #2962ef;
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 500;
+        height: 36px;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__plus_icon {
+        margin-right: 4px;
+        color: #fff;
+        font-size: 20px;
+    }
+    &__item, &__item_active {
+        margin: 0px 8px;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        height: 48px;
+        -webkit-box-align: center;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 12px;
+        color: #44444e;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: normal;
+        cursor: pointer;
+        &:hover {
+            background-color: #e6e7e9;
+        }
+    }
+    &__item_active {
+        color: #2962ef;
+    }
+    &__item_icon {
+        font-size: 25px;
+    }
+    &__menu {
+        padding-top: 8px;
+    }
+    &__bottomBlock {
+        margin-top: auto;
+        padding: 0 24px 22px 24px;
+    }
+    &__download_btn {
+        width: 100%;
+        height: 40px;
+        padding: 8px 12px;
+        border: 1px solid #cdced3;
+        background-color: transparent;
+        outline: none;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #44444e;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: normal;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__bottomBlock_icon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+    &__bottomBlock_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bottomBlock_logo {
+        background-color: #9c9c9c;
+        padding: 4px;
+        color: #fff;
+        border-radius: 6px;
+        width: 55px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+        letter-spacing: normal;
+        text-align: center;
+    }
+    &__bottomBlock_vacansyes {
+        width: 62px;
+        height: 20px;
+        color: #2962ef;
+        display: block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color: #e8f0ff;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 400;
+        letter-spacing: normal;
+    }
+    &__acc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px;
+        border-radius: 8px;
+        padding: 8px 8px 8px 12px;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            background-color: #e6e7e9;
+        }
+    }
+    &__acc_info {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+    }
+    &__acc_avatar {
+        width: 36px;
+        height: 36px;
+    }
+    &__acc_wallet {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        margin-bottom: 6px;
+    }
+    &__acc_money {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        position: relative;
+        height: 20px;
+    }
+    &__acc_arrow {
+        font-size: 32px;
+    }
+    &__accOpen {
+        background: #fff;
+        width: 344px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: none;
+        box-shadow: 0px 0px 0px 1px rgba(21, 21, 31, 0.06), 0px 8px 28px rgba(22, 22, 26, 0.08);
+        border-radius: 12px;
+        position: absolute;
+        bottom: -160px;
+        left: 25px;
+        z-index: 2;
+    }
+    &__accOpen_profile {
+        width: 100%;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: start;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #e6e7e9;
+        &:hover {
+            background-color: #f0f0f2;
+        }
+    }
+    &__accOpen_img {
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+    }
+    &__accOpen_checkmarkIcon {
+        margin-left: auto;
+        font-size: 25px;
+        filter: brightness(0) saturate(100%) invert(31%) sepia(45%) saturate(4923%) hue-rotate(217deg) brightness(96%) contrast(95%);
+    }
+    &__accOpen_item {
+        padding: 10px 20px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        &:first-child {
+            margin-top: 12px;
+        }
+        &:hover {
+            background-color: #f0f0f2;
+        }
+    }
+    &__accOpen_addWallet_icon {
+        width: 24px;
+        height: 24px;
+    }
+    &__accOpen_controlWallet_icon {
+        width: 24px;
+        height: 24px;
+    }
+    &__accOpen_item_text {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: normal;
+    }
+    &__accOpen_shortWallet {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        margin-bottom: 4px;
+    }
+    &__accOpen_typeLogin {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        color: #71727d;
+    }
+    .blur_container {
+        width: 60px;
+        height: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-bottom: 7px;
+    }
+    .square {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(185, 185, 185, 0.2);
+        backdrop-filter: blur(25px);
+        position: absolute;
+        border-radius: 15px;
+    }
+}

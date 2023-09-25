@@ -1,0 +1,66 @@
+.Multichain {
+    background-color: #fff;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    padding: 4.25em 5em 8.5em 5em;
+    &__block {
+        max-width: 1278px;
+        margin: 0 auto;
+    }
+    &__title {
+        color: #9898b2;
+        margin-bottom: 72px;
+        font-size: 1.75em;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    &__networks {
+        font-size: 2.5em;
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__num {
+        font-size: 1.5em;
+        color: #2962ef;
+        line-height: 120%;
+    }
+    &__num + &__num {
+        margin-bottom: 40px;
+    }
+    &__list {
+        margin-top: 56px;
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        gap: 40px;
+    }
+    &__item1, &__item2 {
+        width: 100%;
+        padding: 45px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 14px;
+    }
+    &__item1 {
+        background-image: url(../../../assets/svg/multichainCard1.svg);
+    }
+    &__item2 {
+        background-image: url(../../../assets/svg/multichainCard1.svg);
+    }
+    &__item_title {
+        font-size: 2em;
+        margin-bottom: 9px;
+        line-height: 120%;
+    }
+    &__item_num {
+        color: #2962ef;
+    }
+    &__item_subtitle {
+        font-size: 1.5em;
+        color: #9292a1;
+        line-height: 120%;
+    }
+}

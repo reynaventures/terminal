@@ -1,0 +1,233 @@
+.PocketPage_wrap {
+    padding-left: 240px;
+    width: 100%;
+}
+.PocketPage {
+    margin: auto;
+    max-width: 960px;
+    padding: 24px 0;
+    &__avatar {
+        width: 104px;
+        height: 104px;
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__head_info {
+        gap: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+    }
+    &__info_wallet {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 6px;
+    }
+    &__info_short_wallet {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: -0.4px;
+    }
+    &__money {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 500;
+        letter-spacing: -1.8px;
+        position: relative;
+        height: 48px;
+    }
+    .blur_container {
+        width: 100px;
+        height: 40px;
+        border-radius: 15px;
+        position: absolute;
+        margin-bottom: 7px;
+        .square {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(185, 185, 185, 0.2);
+            backdrop-filter: blur(25px);
+            position: absolute;
+            border-radius: 15px;
+        }
+    }
+    .blur_container_profit {
+        width: 45px;
+        height: 20px;
+        border-radius: 10px;
+        position: relative;
+        .square {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(112 181 109 / 20%);
+            backdrop-filter: blur(25px);
+            position: absolute;
+            border-radius: 10px;
+        }
+    }
+    &__profit_balance {
+        position: relative;
+    }
+    &__profit_positive, &__profit_negative {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        color: #01a643;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+    &__profit_negative {
+        color: #ff4a4a;
+    }
+    &__arrow_icon {
+        margin-left: 0px;
+        font-size: 19px;
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        padding: 5px;
+        border-radius: 8px;
+        &:hover {
+            background-color: #f0f0f2;
+        }
+    }
+    &__head_actions {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 12px;
+    }
+    &__head_share {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        border-radius: 50%;
+        font-size: 22px;
+        border: 1px solid #cdced3;
+        cursor: pointer;
+        background-color: #f0f0f2;
+    }
+    &__head_off {
+        padding: 9px 19px;
+        height: 40px;
+        border: 1px solid #cdced3;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: normal;
+        background-color: #fff;
+        &:hover {
+            background-color: #f0f0f2;
+        }
+    }
+    &__row {
+        margin-top: 24px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        border-bottom: 1px solid #e6e7e9;
+        width: 100%;
+    }
+    &__row_item, &__row_item_active {
+        text-align: center;
+        cursor: pointer;
+        padding-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        padding: 0 13px 10px 13px;
+        border-bottom: 2px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__row_item_active {
+        color: #2962ef;
+        border-bottom: 2px solid #2962ef;
+    }
+    &__walletMenu {
+        width: 380px;
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 0px 1px rgba(21, 21, 31, 0.06), 0px 8px 28px rgba(22, 22, 26, 0.08);
+        background: #fff;
+        border-radius: 8px;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        outline: none;
+        position: absolute;
+        bottom: 0;
+        right: -280px;
+    }
+    &__copy {
+        height: 48px;
+        flex-shrink: 0;
+        background: 0 0;
+        border-radius: 8px;
+        padding: 2px 12px;
+        margin: 0 8px;
+        cursor: pointer;
+        text-align: left;
+        position: relative;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        &:hover {
+            background-color: #f0f0f2;
+        }
+    }
+    &__copy_icon {
+        font-size: 23px;
+    }
+    &__copy_title {
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+    }
+    &__copy_wallet {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: normal;
+        color: #81848e;
+    }
+    &__info_copied {
+        background-color: #2962ef;
+        border-radius: 7px;
+        padding: 0px 8px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

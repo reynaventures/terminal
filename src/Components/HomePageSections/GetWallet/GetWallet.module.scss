@@ -1,0 +1,120 @@
+.GetWallet {
+    background-image: url(../../../assets/svg/getWalletBG.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9em 5em;
+    height: 100vh;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    position: relative;
+    overflow: hidden;
+    &__title {
+        font-size: 2em;
+        line-height: 230%;
+    }
+    &__device {
+        font-size: 4em;
+        font-weight: 500;
+        line-height: 110%;
+        margin-bottom: 73px;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 32px;
+    }
+    &__btn {
+        padding: 15px 23px;
+        height: 51px;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        color: #fff;
+        background-color: #090b18;
+        border-radius: 7px;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__btn_icon {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+    &__btn_title {
+        font-size: 15px;
+        line-height: 150%;
+        letter-spacing: -.02em;
+    }
+    .GetWallet__arrow {
+        margin-left: 15px;
+        color: #090b18;
+        transition: 0.4s ease-out;
+    }
+    &__link {
+        font-size: 1.125em;
+        line-height: 120%;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: 0.3s ease-out;
+        &:hover {
+            color: #2962ef;
+            .GetWallet__arrow {
+                color: #2962ef;
+                transform: translateX(10px);
+            }
+        }
+    }
+    &__bg_img_1,  &__bg_img_2,  &__bg_img_3,  &__bg_img_4,  &__bg_img_5,  &__bg_img_6 {
+        position: absolute;
+    }
+    &__bg_img_1 {
+        width: 260px;
+        height: 280px;
+        top: -5em;
+        left: 4%;
+    }
+    &__bg_img_2 {
+        width: 566px;
+        height: 666px;
+        top: -23.5em;
+        left: 28.3em;
+    }
+    &__bg_img_3 {
+        width: 365px;
+        height: 464px;
+        top: -10em;
+        right: 2.6em;
+    }
+    &__bg_img_4 {
+        width: 366px;
+        height: 431px;
+        bottom: -7.6em;
+        left: 2.3em;
+    }
+    &__bg_img_5 {
+        width: 291px;
+        height: 312px;
+        bottom: -10.7em;
+        left: 35.2em;
+    }
+    &__bg_img_6 {
+        width: 608px;
+        height: 497px;
+        bottom: -9.3em;
+        right: -4.1em;
+    }
+}

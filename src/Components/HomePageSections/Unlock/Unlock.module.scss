@@ -1,0 +1,56 @@
+.Unlock {
+    background-image: url(../../../assets/svg/UnlockBG.svg);
+    gap: 2.5em;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    height: 500px;
+    display: grid;
+    overflow: hidden;
+    max-width: 1278px;
+    margin: 0 auto;
+    margin-top: 2em;
+    &__left, &__right {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__img, &__img_hide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s ease-out;
+    }
+    &__img {
+        opacity: 1;
+    }
+    &__img_hide {
+        opacity: 0;
+    }
+    &__text, &__text_hide {
+        position: absolute;
+        left: 0;
+        transition: 0.4s ease-out;
+        transition-delay: 0.2s;
+        font-size: 2em;
+        line-height: 120%;
+        max-width: 10.875em;
+    }
+    &__text {
+        opacity: 1;
+        top: 50%;
+    }
+    &__text_hide {
+        opacity: 0;
+        top: 0;
+    }
+    &__blue_text {
+        color: #2962ef;
+    }
+}

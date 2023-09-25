@@ -1,0 +1,73 @@
+.WalletNFT {
+    padding: 7.5em 5em 4.25em 5em;
+    &__title {
+        color: #9898b2;
+        font-size: 1.75em;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    &__block {
+        max-width: 1278px;
+        margin: 0 auto;
+    }
+    &__list {
+        display: flex;
+        justify-content: start;
+        align-items: stretch;
+        gap: 27px;
+        width: 100%;
+        margin-top: 27px;
+    }
+    &__card_img {
+        width: 100%;
+    }
+    &__item1, &__item2, &__item3 , &__item4 {
+        background-color: #f4f7ff;
+        border-radius: 16px;
+        padding: 45px;
+    }
+    &__text {
+        font-size: 1.5em;
+        line-height: 120%;
+    }
+    &__text_blue {
+        color: #2962ef;
+    }
+    &__item1 {
+        width: 40%;
+        .WalletNFT__text {
+            margin-top: 32px;
+        }
+    }
+    &__item2 {
+        background-color: #f4f7ff;
+        background-image: url(../../../assets/svg/walletNFTCard2.png);
+        height: 428px;
+        width: 60%;
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        border-radius: 16px;
+        .WalletNFT__text {
+            max-width: 360px;
+        }
+    }
+    &__item3 {
+        .WalletNFT__text {
+            margin-top: 32px;
+            max-width: 350px;
+        }
+    }
+    &__item4 {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        .WalletNFT__text {
+            margin-bottom: 36px;
+        }
+        .WalletNFT__card_img {
+            max-width: 342px;
+            margin-top: auto;
+        }
+    }
+}

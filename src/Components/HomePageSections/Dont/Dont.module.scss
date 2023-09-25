@@ -1,0 +1,45 @@
+.Dont {
+    padding: 4.25em 5em;
+    &__block {
+        max-width: 1278px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 2.5em;
+        line-height: 120%;
+        margin-bottom: 76px;
+        text-align: center;
+    }
+    &__blue_text {
+        color: #2962ef;
+    }
+    &__card {
+        width: 100%;
+        text-align: left;
+        background-image: url(../../../assets/svg/DontBG.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 14px;
+        justify-content: space-between;
+        align-self: stretch;
+        align-items: center;
+        padding: 5.25em 5em;
+        display: flex;
+        overflow: hidden;
+    }
+    &__card_text {
+        max-width: 459px;
+        font-size: 30.5px;
+        line-height: 120%;
+    }
+    &__card_imgs {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__card_img {
+        width: 145px;
+        height: 145px;
+    }
+}
