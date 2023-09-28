@@ -43,4 +43,9 @@ export const useWalletStore = create()(immer((set) => ({
             profit: profit,
         }))
     },
+    setAccets: (assets) => {
+        set(() => ({
+            assets: assets,
+        }))
+    },
 })));

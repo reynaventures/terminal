@@ -45,6 +45,9 @@
         transition: 0.5s all;
         animation: firstBlockView 1s forwards;
     }
+    &__first_left {
+        padding: 0 20px;
+    }
     &__first_right {
         max-width: 100%;
         transform: translateY(120px);
@@ -95,13 +98,14 @@
         color: #fff;
         background-color: #090b18;
         border-radius: 7px;
-        padding: 18px 58px;
+        padding: 1em 3.25em;
         font-weight: 500;
         text-decoration: none;
         position: relative;
         overflow: hidden;
         transition: all .25s cubic-bezier(.39, .575, .565, 1);
-        font-size: 20px;
+        font-size: 1.125em;
+        white-space: nowrap;
         line-height: 120%;
         border: none;
         outline: none;
@@ -149,13 +153,12 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         gap: 5px;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
-        
     }
     &__second_titles {
         height: 500px;
@@ -165,12 +168,7 @@
         margin-top: 56px;
     }
     &__second_title {
-        font-size: 1.3em;
-        font-weight: 400;
-        line-height: 140%;
-        color: #9898b2;
         margin-bottom: 72px;
-        font-weight: 400;
     }
     &__second_name {
         color: rgb(146, 146, 161);
@@ -198,12 +196,19 @@
     }
     &__second_img, &__second_img_last {
         transition: 1s all;
-        max-width: 100%;
+        width: 500px;
+        height: 669px;
         opacity: 0;
         animation: show 1s forwards;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
     &__second_img_last {
-        max-width: 200%;
+        height: 33em;
+        width: auto;
+        right: -50%;
     }
 }
 .Welcome__fixed {
@@ -213,4 +218,134 @@
 .Welcome__container {
     height: 4700px;
     position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+    .Welcome, .Welcome__fixed {
+        height: auto;
+        position: static;
+        background: none;
+        padding: 0;
+        &__first {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+            padding-top: 120px;
+            position: static;
+            background-image: url(../../../assets/svg/welcomeBG.svg);
+            background-position: 50%;
+            background-size: cover;
+        }
+        &__first_right_wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 65px;
+        }
+        &__second {
+            position: static;
+            display: block;
+            width: 100%;
+            background-image: url('../../../assets/svg/mobileSectionWelcomeBg.svg');
+            background-position: 0 0;
+            background-size: cover;
+            border-radius: 32px;
+            transform: translateY(-25px);
+            padding: 42px 20px 48px;
+        }
+        &__first_right {
+            width: 42em;
+            height: 65em;
+            object-fit: cover;
+            margin-top: 40px;
+            transform: translateY(0);
+        }
+        &__first_title {
+            font-size: 52px;
+            max-width: 600px;
+        }
+        &__first_text {
+            font-size: 16px;
+            max-width: 600px;
+        }
+        &__first_title_br {
+            display: none;
+        }
+        &__first_create {
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 18px 52px;
+            img {
+                left: -25%;
+            }
+        }
+        &__first_web {
+            font-size: 16px;
+        }
+        &__first_trustpilot_rate, &__first_appstore_rate {
+            font-size: 14px;
+        }
+        &__first_bnts {
+            margin-bottom: 40px;
+        }
+        &__second_img, &__second_img_last {
+            transition: 1s all;
+            width: 200px;
+            height: auto;
+            position: static;
+            transform: translateY(0);
+            margin: 0 auto;
+        }
+        &__second_img_last {
+            height: 300px;
+            width: auto;
+        }
+        &__second_titles {
+            height: auto;
+        }
+        &__second_name {
+            font-size: 48px;
+        }
+        &__second_text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        &__second_porfolio {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .Welcome__container {
+        height: auto;
+        position: static;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .Welcome, .Welcome__fixed {
+        &__first_title {
+            font-size: 32px;
+            max-width: 360px;
+        }
+        &__first_text {
+            font-size: 14px;
+            max-width: 360px;
+        }
+        &__first_create {
+            font-size: 16px;
+            padding: 16px 24px;
+        }
+        &__first_web {
+            font-size: 14px;
+        }
+        &__second_name {
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Welcome, .Welcome__fixed {
+        &__second_img_last {
+            height: 55vw;
+        }
+    }
 }

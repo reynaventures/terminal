@@ -1,0 +1,19 @@
+.mobileHeader, .mobileHeader_active {
+    background-color: #fff;
+    height: 95vh;
+    width: 100vw;
+    position: fixed;
+    top: -105vh;
+    left: 0;
+    transition: 0.3s ease-out;
+    padding: 20px;
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        font-size: 14px;
+    }
+}
+.mobileHeader_active {
+    top: 93px;
+}

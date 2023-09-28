@@ -68,11 +68,11 @@ function LeftNavBar() {
                                 </div>
                                 <GrFormCheckmark className={style.navBar__accOpen_checkmarkIcon} />
                             </div>
-                            <div className={style.navBar__accOpen_item}>
+                            <div className={style.navBar__accOpen_item} onClick={() => navigate('/app/connect-wallet')}>
                                 <AiOutlinePlus className={style.navBar__accOpen_addWallet_icon}/>
                                 <p className={style.navBar__accOpen_item_text}>Подключить новый кошелек</p>
                             </div>
-                            <div className={style.navBar__accOpen_item}>
+                            <div className={style.navBar__accOpen_item} onClick={() => navigate('/app/connect-wallet')}>
                                 <BiSolidWalletAlt className={style.navBar__accOpen_controlWallet_icon}/>
                                 <p className={style.navBar__accOpen_item_text}>Управление кошельками</p>
                             </div>
@@ -98,7 +98,7 @@ function LeftNavBar() {
                         <li 
                             className={navItem.navigateUrl === paramsActivePage ? style.navBar__item_active : style.navBar__item} 
                             key={navItem.id} 
-                            onClick={() => handleNavItem(navItem)}
+                            onClick={() => navItem.id === 0 ? handleNavItem(navItem) : null}
                         >
                             <navItem.icon className={style.navBar__item_icon} />
                             {navItem.name}

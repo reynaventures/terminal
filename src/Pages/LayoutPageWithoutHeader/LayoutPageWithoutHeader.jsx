@@ -17,6 +17,7 @@ function LayoutPageWithoutHeader() {
   const setAvatar = useWalletStore((state) => state.setAvatar);
   const setIsLoggedIn = useWalletStore((state) => state.setIsLoggedIn);
   const setProfit = useWalletStore((state) => state.setProfit);
+  const setAccets = useWalletStore((state) => state.setAccets);
   const setGlobalError = useReynaAppStore((state) => state.setGlobalError);
   const globalError = useReynaAppStore((state) => state.globalError);
   const [isModalNotExistAccActive, setIsModalNotExistAccActive] = useState(false);
@@ -53,6 +54,7 @@ function LayoutPageWithoutHeader() {
         getBalance(account[0]);
         setAvatar(avatarUrl);
         setProfit(isAccountExist?.profit);
+        setAccets(JSON.parse(isAccountExist?.assets));
         setIsLoggedIn(true);
         navigate('/app/pocket');
       }   else {

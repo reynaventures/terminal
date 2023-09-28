@@ -19,20 +19,23 @@ function Unlock() {
 
     return (
         <div className={style.Unlock}>
-            <div className={style.Unlock__left}>
-                <img src={unlockImg1} alt="" className={activeSlide === 0 ? style.Unlock__img : style.Unlock__img_hide} />
-                <img src={unlockImg2} alt="" className={activeSlide === 1 ? style.Unlock__img : style.Unlock__img_hide} />
-            </div>
-            <div className={style.Unlock__right}>
-                <p className={activeSlide === 0 ? style.Unlock__text : style.Unlock__text_hide}>
-                    <span className={style.Unlock__blue_text}> Connect to any Dapp </span>
-                    on any device
-                </p>
-                <p className={activeSlide === 1 ? style.Unlock__text : style.Unlock__text_hide}>
-                    Manage
-                    <span className={style.Unlock__blue_text}> all your wallets </span>
-                    in one app
-                </p>
+            <h2 className={style.Unlock__title}>Unlock All of Web3</h2>
+            <div className={style.Unlock__card}>
+                <div className={style.Unlock__left}>
+                    <img src={unlockImg1} alt="" className={activeSlide === 0 ? style.Unlock__img : style.Unlock__img_hide} />
+                    <img src={unlockImg2} alt="" className={activeSlide === 1 ? style.Unlock__img : style.Unlock__img_hide} />
+                </div>
+                <div className={style.Unlock__right}>
+                    <p className={activeSlide === 0 ? style.Unlock__text : style.Unlock__text_hide}>
+                        <span className={style.Unlock__blue_text}> Connect to any Dapp </span>
+                        on any device
+                    </p>
+                    <p className={activeSlide === 1 ? style.Unlock__text : style.Unlock__text_hide}>
+                        Manage
+                        <span className={style.Unlock__blue_text}> all your wallets </span>
+                        in one app
+                    </p>
+                </div>
             </div>
         </div>
     )

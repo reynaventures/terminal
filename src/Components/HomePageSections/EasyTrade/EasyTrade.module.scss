@@ -8,10 +8,6 @@
     overflow: hidden;
     height: 854px;
     &__title {
-        color: #9898b2;
-        font-size: 1.75em;
-        font-weight: 400;
-        line-height: 140%;
         margin-bottom: 54px;
     }
     &__block {
@@ -90,5 +86,18 @@
         top: 2.6em;
         bottom: 0%;
         left: -25%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .EasyTrade {
+        &__block {
+            height: auto;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .EasyTrade {
+
     }
 }
