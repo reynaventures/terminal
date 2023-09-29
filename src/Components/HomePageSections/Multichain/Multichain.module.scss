@@ -3,16 +3,14 @@
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
     padding: 4.25em 5em 8.5em 5em;
+    position: relative;
+    z-index: 1;
     &__block {
         max-width: 1278px;
         margin: 0 auto;
     }
     &__title {
-        color: #9898b2;
         margin-bottom: 72px;
-        font-size: 1.75em;
-        font-weight: 400;
-        line-height: 140%;
     }
     &__networks {
         font-size: 2.5em;
@@ -62,5 +60,45 @@
         font-size: 1.5em;
         color: #9292a1;
         line-height: 120%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Multichain {
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__list {
+            flex-direction: column;
+        }
+        &__networks {
+            font-size: 32px;
+        }
+        &__num {
+            font-size: 48px;
+        }
+        &__item_title {
+            font-size: 26px;
+        }
+        &__item_subtitle {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Multichain {
+        &__networks {
+            font-size: 24px;
+        }
+        &__num {
+            font-size: 30px;
+        }
+        &__item_title {
+            font-size: 22px;
+        }
+        &__item_subtitle {
+            font-size: 16px;
+        }
     }
 }

@@ -5,8 +5,6 @@
         margin: 0 auto;
     }
     &__title {
-        font-size: 2.5em;
-        line-height: 120%;
         margin-bottom: 76px;
         text-align: center;
     }
@@ -41,5 +39,37 @@
     &__card_img {
         width: 145px;
         height: 145px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Dont {
+        &__title {
+            color: #090b18;
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+        &__card {
+            flex-direction: column;
+        }
+        &__card_text {
+            font-size: 24px;
+            text-align: center;
+        }
+        &__card_img {
+            width: 96px;
+            height: 96px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .Dont {
+        &__title {
+            color: #090b18;
+            font-size: 24px;
+        }
+        &__card_text {
+            font-size: 20px;
+        }
     }
 }

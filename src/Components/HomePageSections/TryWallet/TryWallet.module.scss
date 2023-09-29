@@ -86,3 +86,75 @@
         right: 0%;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    .TryWallet {
+        padding-bottom: 50px;
+        padding-top: 96px;
+        height: auto;
+        transform: translateY(-20px);
+        &__block {
+            flex-direction: column;
+        }
+        &__leftPart {
+            max-width: 250px;
+        }
+        &__try {
+            font-size: 26px;
+        }
+        &__title {
+            font-size: 52px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__btn {
+            border-radius: 8px;
+            padding: 18px 52px;
+            img {
+                left: -25%;
+            }
+            &:hover {
+                img {
+                    left: 45%;
+                }
+            }
+        }
+        &__rightPart {
+            margin-top: 25px;
+            background-size: auto 80%;
+            bottom: 18em;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: static;
+            height: 507px;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .TryWallet {
+        height: auto;
+        &__try {
+            font-size: 24px;
+            margin-bottom: 2px;
+        }
+        &__title {
+            font-size: 40px;
+        }
+        &__text {
+            font-weight: 500;
+        }
+        &__btn {
+            margin: 0 auto;
+            padding: 16px 24px;
+        }
+        &__leftPart {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
