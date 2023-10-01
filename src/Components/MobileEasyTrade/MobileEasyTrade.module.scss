@@ -18,7 +18,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        column-gap: 50px;
+        column-gap: 10px;
     }
     @keyframes lineAnimation {
         0% {
@@ -34,6 +34,7 @@
         height: 2px;
         width: 100%;
         position: relative;
+        background-color: #ebebeb;
     }
     &__line_active {
         &::before {
@@ -52,9 +53,11 @@
     &__text, &__text_active {
         opacity: 0.32;
         color: #090b18 !important;
-        font-size: 1.5em;
+        font-size: 20px;
         line-height: 120%;
         cursor: pointer;
+        z-index: 1;
+        position: relative;
     }
     &__blue_text {
         color: rgb(41, 98, 239);
@@ -63,7 +66,7 @@
         opacity: 1;
     }
     &__img {
-        width: 100%;
+        width: 80%;
         margin-top: 35px;
         z-index: 1;
         position: relative;
@@ -72,18 +75,7 @@
         transition: 0.1s;
         transition-delay: 0.1s;
         position: relative;
-    }
-    &__gradient {
-        width: 35.0625em;
-        height: 35.3125em;
-        filter: blur(3.5em) blur(5px);
-        background-image: url(../../assets/svg/easyTradeGradient.svg);
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        top: 2.6em;
-        bottom: 0%;
-        left: -25%;
+        display: flex;
+        justify-content: center;
     }
 }

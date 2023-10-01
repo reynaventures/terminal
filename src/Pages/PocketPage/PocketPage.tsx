@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import style from './pocketPage.module.scss';
 import { useWalletStore } from '../../store/walletStore';
-import Loader from '../../Components/Loader/Loader';
-import { useNavigate } from 'react-router-dom';
 import { IoIosShareAlt } from 'react-icons/io';
 import { MdOutlineContentCopy, MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import Tokens from './Components/Tokens/Tokens.tsx';

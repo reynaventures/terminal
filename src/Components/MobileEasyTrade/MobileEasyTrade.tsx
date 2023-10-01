@@ -35,53 +35,54 @@ function MobileEasyTrade() {
             <div className={style.MobileEasyTrade__block}>
                 <h2 className={style.MobileEasyTrade__title}>Trading Made Easy</h2>
                 <ul className={style.MobileEasyTrade__list}>
-                    <li className={style.MobileEasyTrade__item} onClick={() => handleClick(0)}>
-                        <span className={currentIndex === 0 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
-                        <p className={currentIndex === 0 ? style.MobileEasyTrade__text_active : style.MobileEasyTrade__text}> 
-                            <span className={currentIndex === 0 ? style.MobileEasyTrade__blue_text : null}>Multichain trading on Polygon</span>
-                            , Avalanche, BSC, Fantom & more
-                        </p>
-                        <div className={style.MobileEasyTrade__img_wrap} style={currentIndex === 0 ? {opacity: 1} : {opacity: 0}}>
-                            <img
-                                src={easyTradeCard1} 
-                                alt="" 
-                                className={style.MobileEasyTrade__img} 
-                            />
-                            <div className={style.MobileEasyTrade__gradient}></div>
-                        </div>
-                    </li>
-                    <li className={style.MobileEasyTrade__item} onClick={() => handleClick(1)}>
-                        <span className={currentIndex === 1 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
-                        <p className={currentIndex === 1 ? style.MobileEasyTrade__text_active : style.EasyTrade__text}>
-                            Automatically scan every DEX to
-                            <span className={currentIndex === 1 ? style.MobileEasyTrade__blue_text : null}>get the best deal each time you trade</span>
-                        </p>
-                        <div className={style.MobileEasyTrade__img_wrap} style={currentIndex === 1 ? {opacity: 1} : {opacity: 0}}>
-                            <img
-                                src={easyTradeCard2} 
-                                alt="" 
-                                className={style.MobileEasyTrade__img} 
-                            />
-                            <div className={style.MobileEasyTrade__gradient}></div>
-                        </div>
-                    </li>
-                    <li className={style.MobileEasyTrade__item} onClick={() => handleClick(2)}>
-                        <span className={currentIndex === 2 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
-                        <p className={currentIndex === 2 ? style.MobileEasyTrade__text_active : style.MobileEasyTrade__text}>
-                            Find the 
-                            <span className={currentIndex === 2 ? style.MobileEasyTrade__blue_text : null}> cheapest and fastest bridge to 10+ networks </span>
-                            in seconds
-                        </p>
-                        <div className={style.MobileEasyTrade_img_wrap} style={currentIndex === 2 ? {opacity: 1} : {opacity: 0}}>
-                            <img
-                                src={easyTradeCard3} 
-                                alt="" 
-                                className={style.MobileEasyTrade__img} 
-                            />
-                            <div className={style.MobileEasyTrade__gradient}></div>
-                        </div>
-                    </li>
+                    <span onClick={() => handleClick(0)} className={currentIndex === 0 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
+                    <span onClick={() => handleClick(1)} className={currentIndex === 1 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
+                    <span onClick={() => handleClick(2)} className={currentIndex === 2 ? style.MobileEasyTrade__line_active : style.MobileEasyTrade__line}></span>
                 </ul>
+                    {currentIndex === 0 ? (
+                        <div className={style.MobileEasyTrade__item}>
+                            <p className={style.MobileEasyTrade__text_active}> 
+                                <span className={style.MobileEasyTrade__blue_text}>Multichain trading on Polygon</span>
+                                , Avalanche, BSC, Fantom & more
+                            </p>
+                            <div className={style.MobileEasyTrade__img_wrap} style={{opacity: 1}}>
+                                <img
+                                    src={easyTradeCard1} 
+                                    alt="" 
+                                    className={style.MobileEasyTrade__img} 
+                                />
+                            </div>
+                        </div>
+                    ) : currentIndex === 1 ? (
+                        <div className={style.MobileEasyTrade__item}>
+                            <p className={style.MobileEasyTrade__text_active}>
+                                Automatically scan every DEX to
+                                <span className={style.MobileEasyTrade__blue_text}>get the best deal each time you trade</span>
+                            </p>
+                            <div className={style.MobileEasyTrade__img_wrap} style={{opacity: 1}}>
+                                <img
+                                    src={easyTradeCard2} 
+                                    alt="" 
+                                    className={style.MobileEasyTrade__img} 
+                                />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className={style.MobileEasyTrade__item}>
+                            <p className={style.MobileEasyTrade__text_active}>
+                                Find the 
+                                <span className={style.MobileEasyTrade__blue_text}> cheapest and fastest bridge to 10+ networks </span>
+                                in seconds
+                            </p>
+                            <div className={style.MobileEasyTrade__img_wrap} style={{opacity: 1}}>
+                                <img
+                                    src={easyTradeCard3} 
+                                    alt="" 
+                                    className={style.MobileEasyTrade__img} 
+                                />
+                            </div>
+                        </div>
+                    )}
             </div>
         </div>
     )
