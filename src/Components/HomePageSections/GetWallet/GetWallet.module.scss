@@ -118,3 +118,49 @@
         right: -4.1em;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    .GetWallet {
+        height: auto;
+        padding-bottom: 152px;
+        padding-top: 150px;
+        &__bg_img_1,  &__bg_img_2,  &__bg_img_3,  &__bg_img_4,  &__bg_img_5,  &__bg_img_6 {
+            display: none;
+        }
+        &__title {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+        &__device {
+            height: 52px;
+            font-size: 52px;
+            margin-bottom: 30px;
+        }
+        &__btns {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__link {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .GetWallet {
+        &__device {
+            height: 52px;
+            font-size: 40px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .GetWallet {
+        &__title {
+            line-height: 120%;
+        }
+    }
+}

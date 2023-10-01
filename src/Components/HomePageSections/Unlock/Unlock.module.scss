@@ -66,6 +66,21 @@
     .Unlock {
         &__card {
             max-height: none;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: start;
+        }
+        &__text, &__text_hide {
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            width: 100%;
+        }
+        &__text {
+            top: 15%;
+        }
+        &__right {
+            height: 20%;
         }
     }
 }

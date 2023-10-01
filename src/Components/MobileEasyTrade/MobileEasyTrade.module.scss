@@ -1,18 +1,17 @@
-.EasyTrade {
+.MobileEasyTrade {
     background-color: #fff;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     position: relative;
     width: 100%;
-    padding: 7.5em 5em 0 5em;
+    padding: 7.5em 5em 5em 5em;
     overflow: hidden;
-    height: 854px;
+    height: auto;
     &__title {
         margin-bottom: 54px;
     }
     &__block {
         max-width: 1278px;
-        height: 760px;
         margin: 0 auto;
     }
     &__list {
@@ -78,7 +77,7 @@
         width: 35.0625em;
         height: 35.3125em;
         filter: blur(3.5em) blur(5px);
-        background-image: url(../../../assets/svg/easyTradeGradient.svg);
+        background-image: url(../../assets/svg/easyTradeGradient.svg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;

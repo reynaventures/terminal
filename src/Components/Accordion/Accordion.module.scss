@@ -43,3 +43,26 @@
     line-height: 120%;
     max-width: 824px;
 }
+
+@media only screen and (max-width: 991px) {
+    .accordion__item {
+        max-height: 50px;
+    }
+    
+    .accordion__header h4 {
+        font-size: 18px;
+    }
+    
+    .accordion__header i {
+        width: 16px;
+        height: 16px;
+        min-height: 16px;
+        min-width: 16px;
+    }
+    
+    .accordion__content {
+        color: #9292a1;
+        font-size: 16px;
+        line-height: 120%;
+    }
+}

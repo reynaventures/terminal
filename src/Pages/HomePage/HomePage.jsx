@@ -12,12 +12,13 @@ import Asset from '../../Components/HomePageSections/Asset/Asset';
 import FAQs from '../../Components/HomePageSections/FAQs/FAQs';
 import Welcome from '../../Components/HomePageSections/Welcome/Welcome';
 import Unlock from '../../Components/HomePageSections/Unlock/Unlock';
+import MobileEasyTrade from '../../Components/MobileEasyTrade/MobileEasyTrade.tsx';
 
 function HomePage() {
     return (
         <div className={style.homePage}>
             <Welcome />
-            <EasyTrade />
+            {window.innerWidth < 991 ? <MobileEasyTrade /> : <EasyTrade />}
             <WalletNFT />
             <Unlock />
             <Multichain />

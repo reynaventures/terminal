@@ -11,44 +11,9 @@ import getWalletBG5 from '../../../assets/svg/getWalletBG5.png';
 
 function GetWallet() {
 
-/*     const [text, setText] = useState('');
-    const [textToAnimate, setTextToAnimate] = useState('desktop');
-    console.log('textToAnimate', textToAnimate)
-
-    useEffect(() => {
-        let currentIndex = 0;
-        let intervalId;
-        
-        const animateText = () => {
-            if (currentIndex < textToAnimate.length - 1) {
-                setText((prevText) => prevText + textToAnimate[currentIndex]);
-                currentIndex++;
-          } else if (currentIndex === textToAnimate.length - 1) {
-              clearInterval(intervalId);
-              setTimeout(() => {
-                  intervalId = setInterval(() => {
-                      if (currentIndex > 0) {
-                          setText((prevText) => prevText.slice(0, -1));
-                          currentIndex--;
-                        } else {
-                            setTextToAnimate('mobile');
-                            clearInterval(intervalId);
-                        }
-                    }, 100);
-                }, 1000);
-            }
-        };
-        
-        intervalId = setInterval(animateText, 100);
-        
-        return () => {
-            clearInterval(intervalId);
-        }
-      }, [textToAnimate]); */
-
     return (
         <div className={style.GetWallet}>
-            {/* <h2 className={style.GetWallet__title}>{text}</h2> */}
+            <h3 className={style.GetWallet__title}>Get Reyna Wallet for</h3>
             <div className={style.GetWallet__device}>desktop</div>
             <div className={style.GetWallet__btns}>
                 <button className={style.GetWallet__btn}>
