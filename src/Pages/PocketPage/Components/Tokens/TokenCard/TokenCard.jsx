@@ -21,10 +21,10 @@ function TokenCard({ asset }) {
                         </p>
                     </div>
                 </div>
-                <p className={style.Token__item_price}>{asset?.price}</p>
+                <p className={style.Token__item_price}>{asset?.price} $</p>
                 <p className={style.Token__item_balance}>
                     {isBalanceVisible
-                    ?   `${balance} MATIC`
+                    ?   `${asset?.balance} ${asset?.shortname}`
                     : (
                         <div className={style.blur_container}>
                             <div className={style.square}></div>
@@ -35,9 +35,9 @@ function TokenCard({ asset }) {
                     }
                 </p>
                 <div className={style.Token__item_values}>
-                    <p className={style.Token__item_value}>{asset?.value}</p>
+                    <p className={style.Token__item_value}>{asset?.value} $</p>
                     <p className={asset?.profit >= 0 ? style.Token__item_profit_positive : style.Token__item_profit_negative}>
-                        {asset?.profit}
+                        {asset?.profit}%
                         <span>
                             (
                         {isBalanceVisible

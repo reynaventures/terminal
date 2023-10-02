@@ -51,7 +51,7 @@ function LayoutPageWithoutHeader() {
       if(res?.data && isAccountExist) {
         setIsModalNotExistAccActive(false);
         let avatarUrl = `https://api.multiavatar.com/${account[0]}.png`;
-        getBalance(account[0]);
+        setBalance(isAccountExist?.balance);
         setAvatar(avatarUrl);
         setProfit(isAccountExist?.profit);
         setAccets(JSON.parse(isAccountExist?.assets));
@@ -64,16 +64,6 @@ function LayoutPageWithoutHeader() {
         }
     });
 }
-
-  const getBalance = (account) => {
-    window.ethereum.request({ 
-        method: "eth_getBalance", 
-        params: [account, "latest"],
-    }).then((balance) => {
-        setBalance(parseFloat(ethers.utils.formatEther(balance)).toFixed(4)); 
-        return ethers.utils.formatEther(balance);
-    })
-  }
 
   const chainChange = () => {
     window.location.reload();

@@ -19,6 +19,7 @@ export const useReynaAppStore = create()(immer((set) => ({
     activeBlock: 'connect',
     isBalanceVisible: true,
     globalError: null,
+    mobileReynaMenu: false,
 
     setActiveBlock: (name) => {
         set(() => ({
@@ -33,6 +34,11 @@ export const useReynaAppStore = create()(immer((set) => ({
     setGlobalError: (errorText) => {
         set(() => ({
             globalError: errorText,
+        }))
+    },
+    setMobileReynaMenu: (isOpen) => {
+        set(() => ({
+            mobileReynaMenu: isOpen,
         }))
     },
 })));

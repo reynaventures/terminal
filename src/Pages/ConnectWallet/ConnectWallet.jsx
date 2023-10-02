@@ -4,7 +4,6 @@ import metamaskIcon from '../../assets/img/metaMaskIcon.png';
 import { useWalletStore } from '../../store/walletStore';
 import { useNavigate } from 'react-router-dom';
 import ConnectWalletModal from '../../Components/Modals/ConnectWalletModal/ConnectWalletModal.tsx';
-import { ethers } from "ethers";
 import axios from 'axios';
 import AccNotExistModal from '../../Components/Modals/AccNotExistModal/AccNotExistModal';
 import { useReynaAppStore } from '../../store/reynaApp';
@@ -41,7 +40,7 @@ function ConnectWallet() {
             if(res?.data && isAccountExist) {
                 let avatarUrl = `https://api.multiavatar.com/${account[0]}.png`;
                 setWallet(account[0]);
-                getBalance(account[0]);
+                setBalance(isAccountExist?.balance);
                 setAvatar(avatarUrl);
                 setProfit(isAccountExist?.profit);
                 setIsLoggedIn(true);
@@ -51,16 +50,6 @@ function ConnectWallet() {
                 setIsModalNotExistAccActive(true);
             }
         });
-    }
-
-    const getBalance = (account) => {
-        window.ethereum.request({ 
-            method: "eth_getBalance", 
-            params: [account, "latest"],
-        }).then((balance) => {
-            setBalance(parseFloat(ethers.utils.formatEther(balance)).toFixed(4)); 
-            return ethers.utils.formatEther(balance);
-        })
     }
 
     return (

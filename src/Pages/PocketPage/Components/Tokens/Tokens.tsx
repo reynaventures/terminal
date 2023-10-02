@@ -20,7 +20,7 @@ function Tokens() {
                     <p className={style.Tokens__wallet_title}>Wallet ·</p>
                     <span className={style.Tokens__wallet_balance}>
                         {isBalanceVisible
-                        ?   `${balance} MATIC`
+                        ?   `${balance} $`
                         : (
                             <div className={style.blur_container}>
                                 <div className={style.square}></div>

@@ -95,3 +95,25 @@
         color: #71727d;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .Tokens {
+        &__table {
+            padding: 14px 10px 14px;
+        }
+        &__table_head p:nth-child(2) {
+            display: none;
+        }
+        &__table_head p:nth-child(3) {
+            display: none;
+        }
+        &__table_head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__wallet_title, &__wallet_balance {
+            font-size: 16px;
+        }
+    }
+}

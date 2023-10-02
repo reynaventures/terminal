@@ -61,7 +61,7 @@ function PocketPage() {
                             </div>
                             <div className={style.PocketPage__money}>
                                 {isBalanceVisible
-                                ?   `${balance} MATIC`
+                                ?   `${balance} $`
                                 :   (
                                     <div className={style.blur_container}>
                                         <div className={style.square}></div>

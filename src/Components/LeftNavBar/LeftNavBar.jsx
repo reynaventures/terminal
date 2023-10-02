@@ -20,19 +20,23 @@ function LeftNavBar() {
     const wallet = useWalletStore((state) => state.wallet);
     const balance = useWalletStore((state) => state.balance);
     const avatar = useWalletStore((state) => state.avatar);
+    const mobileReynaMenu = useReynaAppStore((state) => state.mobileReynaMenu);
+    const setMobileReynaMenu = useReynaAppStore((state) => state.setMobileReynaMenu);
     const isBalanceVisible = useReynaAppStore((state) => state.isBalanceVisible);
     const shortlyWallet = `${wallet?.slice(0, 6)}...${wallet?.slice(wallet?.length - 4, wallet?.length - 0)}`
     const [open, setOpen] = useState(false);
     const paramsActivePage = window.location.pathname;
     const accOpenBlockRef = useRef();
+    const mobileLeftMenuRef = useRef();
     useClickOutsideAndClose(accOpenBlockRef, () => setOpen(false));
+    useClickOutsideAndClose(mobileLeftMenuRef, () => setMobileReynaMenu(false));
 
     const handleNavItem = (navItem) => {
         navigate(navItem.navigateUrl);
     };
 
     return (
-        <aside className={style.navBar}>
+        <aside className={mobileReynaMenu && window.innerWidth <= 991 ? style.navBar_mobile_active : style.navBar} ref={mobileLeftMenuRef}>
             {isLoggedIn
             ? (
                 <div className={style.navBar__acc} onClick={() => setOpen(prev => !prev)}>
@@ -42,7 +46,7 @@ function LeftNavBar() {
                             <p className={style.navBar__acc_wallet}>{shortlyWallet}</p>
                             <div className={style.navBar__acc_money}>
                                 {isBalanceVisible
-                                ?   `${balance} MATIC`
+                                ?   `${balance} $`
                                 : (
                                     <div className={style.blur_container}>
                                         <div className={style.square}></div>

@@ -231,3 +231,31 @@
         line-height: normal;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    .PocketPage_wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .PocketPage {
+        &__head {
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        &__head_off {
+            width: 100%;
+        }
+        &__head_actions {
+            width: 100%;
+        }
+        &__money {
+            font-size: 28px;
+            white-space: nowrap;
+            line-height: 30px;
+        }
+    }
+}

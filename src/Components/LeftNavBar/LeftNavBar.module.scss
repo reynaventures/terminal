@@ -1,4 +1,4 @@
-.navBar {
+.navBar, .navBar_mobile_active {
     width: 240px;
     min-width: 240px;
     position: fixed;
@@ -8,6 +8,7 @@
     background-color: #f5f5f7;
     display: flex;
     flex-flow: column;
+    z-index: 3;
     &__welcome {
         padding: 24px 20px 32px 24px;
         text-align: center;
@@ -293,8 +294,15 @@
     }
 }
 
+.navBar_mobile_active {
+    left: 0;
+}
+
 @media only screen and (max-width: 991px) {
     .navBar {
-       
+        left: -100%;
+        &__logo {
+            font-size: 16px;
+        }
     }
 }

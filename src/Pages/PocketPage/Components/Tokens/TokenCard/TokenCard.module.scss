@@ -74,3 +74,22 @@
         color: #01a643;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .Token {
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__item_price {
+            display: none;
+        }
+        &__item_balance {
+            display: none;
+        }
+        &__item_values {
+            width: 120px;
+        }
+    }
+}

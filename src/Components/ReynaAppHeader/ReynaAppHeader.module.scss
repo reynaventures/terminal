@@ -84,4 +84,27 @@
     &__eye {
         font-size: 24px;
     }
+    &__burger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .ReynaAppHeader {
+        padding-left: 0px;
+        background-color: #f5f5f7;
+        &__block {
+            padding: 16px 16px 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__burger {
+            display: block;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        &__input {
+            display: none;
+        }
+    }
 }
