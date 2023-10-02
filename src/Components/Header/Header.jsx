@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 import MobileHeader from '../MobileHeader/MobileHeader';
+import logo from '../../assets/svg/reynaLogo.svg';
 
 function Header() {
 
@@ -46,8 +47,7 @@ function Header() {
         <header className={hideHeader ? style.header_hide : style.header}>
             <div className={style.header__container}>
                 <div className={style.header__logo} onClick={handleLogo}>
-                    <img src='' alt='' className={style.header__img}/>
-                    <p className={style.header__title}>Reyna</p>
+                    <img src={logo} alt='' className={style.header__img}/>
                 </div>
                 <div className={style.header__rightPart}>
                     <ul className={style.header__nav}>

@@ -3,13 +3,14 @@ import style from './Footer.module.scss';
 import footerSertificatedImg from '../../assets/svg/footerSertificatedImg.svg';
 import { BsDiscord, BsTwitter, BsGithub } from 'react-icons/bs';
 import { BiLogoTelegram, BiLogoFacebook, BiLogoLinkedin } from 'react-icons/bi';
+import logo from '../../assets/svg/reynaLogo.svg';
 
 function Footer() {
     return (
         <div className={style.Footer}>
             <div className={style.Footer__block}>
                 <div className={style.Footer__list}>
-                    <h3 className={style.Footer__title}>Reyna</h3>
+                    <img src={logo} alt='' className={style.Footer__logo}/>
                     <div className={style.Footer__column}>
                         <h4 className={style.Footer__column_title}>Reyna</h4>
                         <ul className={style.Footer__column_list}>
